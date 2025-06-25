@@ -10,15 +10,15 @@ provider "aws" {
 resource "aws_instance" "this" {
   ami                     = "ami-0e449927258d45bc4"
   instance_type           = "t2.micro"
-  provider = aws.us-east-1
+  provider = "aws.us-east-1"
   tags = {
     Name = "HelloWorld"
   }
 }
-resource "aws_instance" "this" {
+resource "aws_instance" "second" {
   ami                     = "ami-06971c49acd687c30"
   instance_type           = "t2.micro"
-  provider = aws.us-east-2
+  provider = "aws.us-east-2"
   tags = {
     Name = "HelloWorld"
   }
